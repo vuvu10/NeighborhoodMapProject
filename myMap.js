@@ -177,6 +177,17 @@ function initMap() {
 		}
 	}
 
+var ViewModel = function()	{
+	this.restaurantList = ko.observableArray(myLocations);
+};
+
+var viewModel = new ViewModel();
+
+ko.applyBindings(viewModel);
+
+
+
+
 
 
 
