@@ -1,1 +1,189 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Neighborhood Map Project</title>
+	<link rel='stylesheet'  href='myMap.css'>
+
+</head>
+
+<body>
+
+	<h1>Neighborhood Map.</h1>
+
+	<div class="search" id="search">
+		<input class="search-box" id="search-box" placeholder="search here" data-bind="textInput: searchTerm, valueUpdate: 'afterkeydown'"/>
+	</div>	
+	
+	<div class="shows">
+		<div class="show-options">
+			<div>
+				<input id="show-listings" type="button" value="Show Listings">
+				<input  id="hide-listings" type="button" value="Hide Listings">
+			</div>
+		</div>
+	</div>
+
+	<nav class="container" id="menu">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	</nav> 
+
+	<aside class="wrapper-box" id="listings">
+
+		<div class="wrapper">
+
+			<ul class="list-Restaurants" data-bind="foreach: restaurantList">
+
+				<li> 
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Aagan</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Bar Boulud</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Big Daddy's</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Candle Cafe West</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">City Diner</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Chipotle Mexican Grill</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Cibo & Vino</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Carmine Italian Restaurant</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Henry's</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Serafina Upper West Side</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Sugar Factory</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Metro Diner</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">La Caridad</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Le Monde</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Le Piff NYC</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Luce</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">The Mermaid Inn</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="#" class="list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">French Roast</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="# class=list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">5Napkin Burger</a>
+				</li>
+
+				<li>
+					<span data-bind="text: $data.name"> </span>
+					<span data-bind="text: name"> </span>
+					<a href="# class=list-Restaurants-items" data-bind="text: $data.name, click: $parent.showInfo">Regional</a>
+					
+				</li>
+				
+			</ul>
+			
+		</div>
+		
+	</aside>
+
+<main class="">
+
+	<div id="map"></div>
+
+</main>
+
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.1/knockout-min.js"></script>
+
+	<script type="text/javascript" src="myMap.js"></script>
+	
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZhItPkc1z1JeDesm0KOKqmqA_w28CK7A&callback=initMap">
+			
+	</script>
+
+	
+
+	
+
+	</body>
+</html>
