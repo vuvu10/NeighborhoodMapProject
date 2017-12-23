@@ -1,70 +1,77 @@
 
-html,
+#map {
+	bottom: 0px;
+	height: 100%;
+	left: 362px;
+    	position: absolute;
+    	right: 0px;	
+}
 
+#mapWrapper {
+		height: 100%;
+	
+}
+
+
+html, 
 body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
-#map {
-	height: 100%;
-	bottom: 0px;
-	left: 345px;
-	right: 0px;
-	position: absolute;
-	
-}
-
 
 #search {
 	width: 100%;
 	display: flex;
+	font-size: 20px;
 
 }
 
-#container {
-	display: inline-block;
-	cursor: pointer;
+
+#app {
+	width: ;
+	height: ;
+	display: ;
 }
 
-.bar1, .bar2, .bar3 {
-	width: 35px;
-	height: 5px;
-	background-color:;
-	margin: 6px 0;
-	transition: .7s;
-}
-
-#box {
-	display: block;
-	cursor: pointer;
-}
-#hide-listings {
-	width: 10%%;
+#list {
+	order: ;
+	flex-flow: ;
+	padding: ;
+	width: ;
+	height: ;
+	overflow: ;
 
 }
 
-.wrapper {
+ul li {
+	list-style: none;
+}
+
+#input {
 	font-size: 14px;
-	font-weight: 350;
-	margin-left: 5px;
-	padding: 0;
-	overflow: auto;;
-	width: 26%;
-	height: 70%;
+	margin-left: ;
+	padding: px;
+	text-overflow: ;
+	width: ;
+	margin-top: ;
+	margin-right: ;
 }
 
-.listings {
-	font-size: 12px;
-    margin-left: 0;
-    padding: 0 11px 0 13px;
-    text-overflow:;
-    width: 200px;
-    margin-top: 44px;
-    margin-right: -74px;
-}
+#search-section {
+		display: block!important;
+		width: 16%;
+		position: fixed;
+		padding-bottom: ;
+		margin-bottom: 1%;
+	}
 
-li: hover {
 
-}
+
+
+
+
+
+
+
