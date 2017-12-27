@@ -123,11 +123,7 @@ function initMap() {
 	zoom: 14
 	});
 
-	//My infowindow to display the contents of the map.
-	var InfowindowContent = [
-		
 
-];
 
 	//Displaying multiple markers on a map
 	var infoWindow = new google.maps.InfoWindow(), myLocations, i;
