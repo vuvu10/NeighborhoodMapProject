@@ -123,25 +123,30 @@ function initMap() {
 	zoom: 14
 	});
 
-
+	
 
 	//Displaying multiple markers on a map
-	var infoWindow = new google.maps.InfoWindow(), myLocations, i;
+	var infoWindow = new google.maps.InfoWindow();
 
-	//Looping through the array of locations & placing each one of them on the map.
-	for( i = 0; i < myLocations.length; i++) {
-		var position = new google.maps.LatLng(myLocations[i][1], myLocations[i][2], myLocations[i][3], myLocations[i][4]);
-		bounds.extend(position);
+	markers = [];
+
+	function setMarkers() {
 		marker = new google.maps.Marker({
-			position: position,
-			map: map,
-			title: myLocations[i][0]
-		});
+		position: new google.maps.LatLng(myLocations[i][1], myLocations[i][2]),
+		title: 'NYC'	
+	
+	});
+	//Adding the marker to the map.
+	marker.setMap(map);
 
-		//Allowing each marker to have an infowindow...
-		google.maps.event.addListener(marker, 'click', (function(marker, content, infowindow) {
+	markers.psuh({
+		marker: marker,
+		place: place
+	});
+
+	google.maps.event.addListener(marker, 'click', (function(marker, content, infowindow) {
 			return function() {
-				infoWindow.setContent(content);
+				infoWindow.setContent(myLocations[i][0]);
 				infowindow.open(map, marker);
 			}
 		})(marker,content,infowindow));
@@ -188,27 +193,38 @@ function myViewModel() {
 
 	this.locationsList = ko.observableArray([]);
 
-	myLocations.forEach(function(locationItem){
-		self.locationsList.push( new locations(locationItem) );
-	});
+	this.MYLocations = function(location) {
+		google.maps.event.trigger(location.marker, 'click');
+	}
 
-	this.locationsList = ko.computed(function() {
+	};
+
+	this.filteredList = ko.computed(function() {
 		var filter = self.searchFilter().toLowerCase();
-		if(filter) {
-			return ko.outils.arrayFilter(self.locationsList(), function(locationItem) {
-					var string = locationItem.name.toLowerCase();
-					var result = (string.search(filter);
-					locationItem.visible(result);
-					return result;
-				});
-
-			self.locationsList().forEach(function(locationItem) {
-					locationItem.visible(true);
-
+		if(!filter) {
+			myLocations.forEach(function(locationItem() {
+				self.locationsList.push(new locations(locationItem) );
 			});
-			return self.locationsList();
+			return this.locationsList();
+		} else {
+
+			return ko.outils.arrayFilter(self.locationsList(), function(locationItem) {
+					if (locationsList.toLowerCase().indexOf(filter) !== -1) {
+						location.marker.setvisible(true);
+					  return location;
+					} else {
+					  location.marker.setvisible(false);
+					  infowindow.close();
+					}
+				});
+			}		
 		}
-	}, self);
+	}, myViewModel);
 }
 
 ko.applyBindings(new myViewModel());
+
+
+	}
+
+}
