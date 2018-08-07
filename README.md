@@ -1,6 +1,6 @@
 # NeighborhoodMapProject
 As part of Udacity' Full Stack Nano Degree project, students were asked to create a neighborhood map project, which will include different apis.
-In this project, I have included a list of a couple restaurants on the upper west side of Manhatan. Also, I used google maps api & knockout. I have used markers on the map, so that when users are searching on the map, the location will be displayed.
+In this project, I have included a list of a couple restaurants on the upper west side of Manhattan. Also, I used google maps api & knockout. I have used markers on the map, so that when users are searching on the map, the location will be displayed.
 Users can filter down the names of the restaurants.
 I have also included the Adresses of the restaurants.
 
