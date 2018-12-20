@@ -10,3 +10,6 @@ I have also included the Adresses of the restaurants.
 3. Open the the downloaded files in your convenient browser.
 4. Click on the search bar on the upper left side of the page.
 5. Type in the name of the restaurants.
+
+# Frameworks & libraries used..
+Framework & libraries used for this project are respectively: KnockoutJs & jQuery.
