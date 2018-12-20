@@ -4,7 +4,9 @@ In this project, I have included a list of a couple restaurants on the upper wes
 Users can filter down the names of the restaurants.
 I have also included the Adresses of the restaurants.
 
-Here is the instructions on how to use this project:
+#  The instructions on how to use this project:
 1. Click the following link: https://github.com/vuvu10/NeighborhoodMapProject/
-2. Click on the search bar on the upper left side of the page.
-3. Type in the name of the restaurants.
+2.  Download or copy & paste the files on your repository.
+3. Open the the downloaded files in your convenient browser.
+4. Click on the search bar on the upper left side of the page.
+5. Type in the name of the restaurants.
